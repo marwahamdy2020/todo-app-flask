@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>To-Do App</h2>
+    <form action="/add" method="POST">
+      <input type="text" name="task" placeholder="أضيفي مهمة جديدة" required>
+      <button type="submit">أضف</button>
+    </form>
+    <ul>
+      {% for task in tasks %}
+      <li class="{{ 'completed' if task[2]=='completed' else '' }}">
+        {{ task[1] }}
+        <a href="/toggle/{{ task[0] }}" class="toggle-btn">تغيير الحالة</a>
+        <a href="/delete/{{ task[0] }}" class="delete-btn">حذف</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

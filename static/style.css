@@ -1,0 +1,62 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.container {
+  background: linear-gradient(135deg, #81ecec, #74b9ff);
+  padding: 25px;
+  border-radius: 15px;
+  width: 400px;
+  margin: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: 70%;
+}
+
+button, .toggle-btn, .delete-btn {
+  padding: 8px 12px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  background-color: #2d3436;
+}
+
+.toggle-btn {
+  background-color: #fdcb6e;
+}
+
+.delete-btn {
+  background-color: #d63031;
+}
+
+button:hover, .toggle-btn:hover, .delete-btn:hover {
+  opacity: 0.8;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: rgb(210, 25, 25);
+}
